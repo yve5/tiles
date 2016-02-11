@@ -22,10 +22,11 @@ var appConfig = {
 // Generate CSS from SCSS sheets
 gulp.task('scss', function () {
   return gulp.src(appConfig.app + '/css/*.scss')
-          .pipe($.sass.sync({
+          .pipe($.compass({
+            sass: appConfig.app + '/css/',
+            css: appConfig.app + '/css/',
             outputStyle: 'expanded',
-            includePaths: ['.'],
-            precision: 10
+            style: 'nested'
           }).on('error', $.sass.logError))
           .pipe(gulp.dest(appConfig.app + '/css'))
           .pipe(reload({stream: true}));

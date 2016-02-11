@@ -1,3 +1,4 @@
+@import 'compass';
 
 .browsehappy {
   margin: 0.2em 0;
@@ -12,4 +13,206 @@ body {
 
 .buffer-top {
   margin-top: 70px;
+}
+
+
+// Bootstrap variables
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+// Global
+body {
+  background-color: #e3f2fd;
+  padding: 0;
+}
+
+// Header
+div.btn-group.buffer-bottom {
+  margin-bottom: 10px;
+}
+
+// Tiles
+div.col-sm-2 {
+  padding-right: 0;
+  padding-left: 0;
+
+  div.tile {
+    margin: 4px auto 3px;
+    font-size: 1.5em;
+    cursor: pointer;
+    height: 250px;
+    width: 250px;
+
+    &.all {
+      background-color: #64b5f6;
+      background-image: linear-gradient(to top left, #64b5f6, #2196f3);
+
+      &:hover {
+        background-color: #42a5f5;
+        background-image: linear-gradient(to top left, #42a5f5, #1e88e5);
+      }
+    }
+
+    &.prod {
+      background-color: #ffcdd2;
+      background-image: linear-gradient(to top left, #ffcdd2, #e57373);
+
+      &:hover {
+        background-color: #ef9a9a;
+        background-image: linear-gradient(to top left, #ef9a9a, #ef5350);
+      }
+    }
+
+    &.rece {
+      background-color: #fff176;
+      background-image: linear-gradient(to top left, #fff176, #ffeb3b);
+
+      &:hover {
+        background-color: #ffee58;
+        background-image: linear-gradient(to top left, #ffee58, #fdd835);
+      }
+    }
+
+    &.deve {
+      background-color: #c5e1a5;
+      background-image: linear-gradient(to top left, #c5e1a5, #9ccc65);
+
+      &:hover {
+        background-color: #aed581;
+        background-image: linear-gradient(to top left, #aed581, #8bc34a);
+      }
+    }
+
+    div.img-wrapper {
+      padding: 5%;
+      height: 80%;
+
+      img {
+        margin: auto;
+        height: 100%;
+      }
+    }
+
+    div {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.1em;
+      height: 50px;
+    }
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+      font-size: 0.8em;
+      height: 117px;
+      width: 117px;
+    }
+
+    @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+      font-size: 1.0em;
+      height: 155px;
+      width: 155px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      font-size: 1.0em;
+      height: 187px;
+      width: 187px;
+    }
+  }
+
+  div.subtile {
+    padding: 2px 0 20px 0;
+    text-align: center;
+  }
+}
+
+
+// Material Design Icons
+$material-design-path: '../fonts/';
+$material-design-name: 'MaterialIcons-Regular';
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$material-design-path}#{$material-design-name}.eot'); // For IE6-8
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url('#{$material-design-path}#{$material-design-name}.woff2') format('woff2'),
+    url('#{$material-design-path}#{$material-design-name}.woff') format('woff'),
+    url('#{$material-design-path}#{$material-design-name}.ttf') format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  // Preferred icon size
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  // Support for all WebKit browsers.
+  -webkit-font-smoothing: antialiased;
+
+  // Support for Safari and Chrome.
+  text-rendering: optimizeLegibility;
+
+  // Support for Firefox.
+  -moz-osx-font-smoothing: grayscale;
+
+  // Support for IE.
+  font-feature-settings: 'liga';
+
+  // Rules for sizing the icon.
+  &.md-18 {
+    font-size: 18px;
+  }
+  &.md-24 {
+    font-size: 24px;
+  }
+  &.md-36 {
+    font-size: 36px;
+  }
+  &.md-48 {
+    font-size: 48px;
+  }
+
+  // Rules for using icons as black on a light background.
+  &.md-dark {
+    color: rgba(0, 0, 0, 0.54);
+
+    &.md-inactive {
+      color: rgba(0, 0, 0, 0.26);
+    }
+  }
+
+  // Rules for using icons as white on a dark background.
+  &.md-light {
+    color: rgba(255, 255, 255, 1);
+
+    &.md-inactive {
+      color: rgba(255, 255, 255, 0.3);
+    }
+  }
 }

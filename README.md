@@ -1,4 +1,4 @@
-# MF Gulp Boilerplate
+# Tiles
 
 
 ## What is it?

@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('helloApp', [
+  .module('tilesApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -13,17 +13,11 @@ angular
   ])
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/login.html',
-        controller: 'loginController',
-        controllerAs: 'login'
-      })
-      .when('/profil', {
-        templateUrl: 'views/profil.html',
-        controller: 'profilController',
-        controllerAs: 'profil'
+      .when('/:env', {
+        templateUrl: 'views/home.html',
+        controller: 'homeController'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/all'
       });
   }]);
