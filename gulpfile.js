@@ -155,7 +155,7 @@ gulp.task('serve', ['scss'], function () {
 
 
 gulp.task('serve:dist', function () {
-  runSequence('build');
+//  runSequence('build');
   browserSync({
     notify: false,
     port: 1337,

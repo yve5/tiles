@@ -39,7 +39,7 @@ var tab = [{
       },
       {
         "title": "App 2 RECE",
-        "img": "img/yeoman.png",
+        "img": "img/logo.png",
         "url": "https://www.example.com",
         "env": "rece"
       },
