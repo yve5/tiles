@@ -154,7 +154,7 @@ gulp.task('serve', ['scss'], function () {
 });
 
 
-gulp.task('serve:dist', function () {
+gulp.task('dist', function () {
 //  runSequence('build');
   browserSync({
     notify: false,
